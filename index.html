@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Practice of Noble Avalokiteśvara · སྤྱན་རས་གཟིགས་ཀྱི་སྒྲུབ་ཐབས། · 四臂观音修持仪轨</title>
+<meta name="description" content="A four-line liturgical edition of the Chenrezig sadhana: Tibetan script, phonetics, English, and Chinese.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3Eༀ%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Serif+Tibetan:wght@400;500;600;700&family=Cormorant+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:        #2a1f17;
+    --ink-soft:   #5c4a38;
+    --paper:      #f8f1e3;
+    --paper-deep: #ede1c8;
+    --paper-glow: #fbf5e9;
+    --saffron:    #c1632a;
+    --saffron-deep: #9c4a1a;
+    --maroon:     #6b1e2a;
+    --maroon-deep: #4a1319;
+    --gold:       #b8883a;
+    --gold-soft:  #d4a83f;
+    --lotus:      #c88a78;
+    --sky:        #3d5a6c;
+    --shadow:     rgba(74, 34, 14, 0.12);
+    --shadow-deep: rgba(74, 34, 14, 0.22);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+
+  body {
+    font-family: 'Crimson Pro', 'Noto Serif Tibetan', 'Noto Serif SC', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 18px;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(193, 99, 42, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(107, 30, 42, 0.04) 0%, transparent 50%),
+      linear-gradient(180deg, var(--paper-glow) 0%, var(--paper) 20%, var(--paper) 80%, var(--paper-deep) 100%);
+    background-attachment: fixed;
+  }
+
+  /* Subtle paper grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' seed='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0 0.1 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  /* Typography: Tibetan */
+  .bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    font-weight: 500;
+    font-size: 1.35em;
+    line-height: 1.85;
+    color: var(--maroon-deep);
+    letter-spacing: 0.01em;
+  }
+
+  /* Typography: Phonetics */
+  .ph {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.05em;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+
+  /* Typography: English */
+  .en {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 400;
+    font-size: 1.05em;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* Typography: Chinese */
+  .zh {
+    font-family: 'Noto Serif SC', 'STSong', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--maroon);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  /* === LAYOUT === */
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  @media (min-width: 1100px) {
+    .page { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+
+  /* === HERO === */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem 5rem;
+    position: relative;
+  }
+
+  .hero-mandala {
+    width: min(340px, 75vw);
+    height: min(340px, 75vw);
+    margin: 0 auto 1.5rem;
+    position: relative;
+    animation: fadeInUp 1.4s ease-out;
+  }
+
+  .hero-mandala svg { width: 100%; height: 100%; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    color: var(--maroon-deep);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    animation: fadeInUp 1.6s ease-out 0.2s both;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    margin-bottom: 0.3rem;
+    animation: fadeInUp 1.8s ease-out 0.4s both;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--saffron-deep);
+    margin-top: 1.2rem;
+    animation: fadeInUp 2s ease-out 0.6s both;
+  }
+
+  .hero-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    color: var(--maroon);
+    margin-top: 0.8rem;
+    letter-spacing: 0.3em;
+    animation: fadeInUp 2s ease-out 0.8s both;
+  }
+
+  /* === SECTION DIVIDERS === */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3.5rem auto 2.5rem;
+    gap: 1.2rem;
+    max-width: 400px;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
+  }
+
+  .divider-ornament {
+    color: var(--gold);
+    font-size: 1.5rem;
+  }
+
+  /* === SECTION === */
+  .section {
+    margin: 4rem 0 2rem;
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .section-number {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--saffron-deep);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--maroon);
+  }
+
+  .section-title-bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    color: var(--maroon-deep);
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .section-title-zh {
+    font-family: 'Noto Serif SC', serif;
+    color: var(--maroon);
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* === AUTHOR ATTRIBUTION (LARGE, DIGNIFIED) === */
+  .author-card {
+    max-width: 640px;
+    margin: 1.2rem auto 2.5rem;
+    padding: 1.8rem 2rem;
+    background: linear-gradient(135deg, rgba(193, 99, 42, 0.06) 0%, rgba(107, 30, 42, 0.04) 100%);
+    border: 1px solid rgba(184, 136, 58, 0.25);
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+  }
+
+  .author-card::before, .author-card::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--gold);
+    opacity: 0.5;
+  }
+
+  .author-card::before {
+    top: -1px; left: -1px;
+    border-right: none; border-bottom: none;
+  }
+
+  .author-card::after {
+    bottom: -1px; right: -1px;
+    border-left: none; border-top: none;
+  }
+
+  .author-label {
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--saffron-deep);
+    margin-bottom: 0.8rem;
+  }
+
+  .author-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--maroon-deep);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+  }
+
+  .author-bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    color: var(--maroon);
+    font-size: 1.25rem;
+    margin: 0.4rem 0;
+  }
+
+  .author-zh {
+    font-family: 'Noto Serif SC', serif;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+  }
+
+  .author-note {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-top: 1rem;
+    line-height: 1.55;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* === VERSE BLOCK === */
+  .verse {
+    margin: 1.6rem auto;
+    max-width: 720px;
+    padding: 1rem 1.2rem 1rem 1.5rem;
+    border-left: 2px solid var(--saffron);
+    position: relative;
+    transition: background 0.3s ease;
+  }
+
+  .verse:hover {
+    background: rgba(193, 99, 42, 0.03);
+  }
+
+  .verse > div { margin: 0.25rem 0; }
+
+  .verse-group {
+    margin: 2.4rem 0;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid rgba(184, 136, 58, 0.2);
+  }
+
+  .verse-group:first-child { border-top: none; padding-top: 0; }
+
+  .verse-group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--saffron-deep);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .verse-group-title .bo-inline {
+    font-family: 'Noto Serif Tibetan', serif;
+    color: var(--maroon);
+    font-style: normal;
+  }
+
+  /* === RUBRIC (stage directions) === */
+  .rubric {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--saffron-deep);
+    font-size: 0.95rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .rubric::before, .rubric::after {
+    content: '✦';
+    margin: 0 0.8rem;
+    color: var(--gold);
+    font-size: 0.7rem;
+    vertical-align: middle;
+  }
+
+  /* === SIX REALMS TABLE === */
+  .realm-tag {
+    display: inline-block;
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    color: var(--saffron-deep);
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    margin-left: 0.5rem;
+    border: 1px solid rgba(193, 99, 42, 0.3);
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+
+  /* === MANTRA DISPLAY === */
+  .mantra-display {
+    margin: 3rem auto;
+    max-width: 780px;
+    text-align: center;
+  }
+
+  .mantra-syllables {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+    margin: 2rem auto 1rem;
+    max-width: 700px;
+  }
+
+  .syllable {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif Tibetan', serif;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-weight: 600;
+    color: var(--ink);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 20px var(--shadow), inset 0 0 20px rgba(255,255,255,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .syllable:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 28px var(--shadow-deep), inset 0 0 20px rgba(255,255,255,0.4);
+  }
+
+  .syllable[data-color="white"]  { background: radial-gradient(circle at 30% 30%, #ffffff, #e8e0d0); }
+  .syllable[data-color="green"]  { background: radial-gradient(circle at 30% 30%, #9ec88a, #5a8d4a); color: #fff; }
+  .syllable[data-color="yellow"] { background: radial-gradient(circle at 30% 30%, #e8c866, #b8883a); color: var(--ink); }
+  .syllable[data-color="blue"]   { background: radial-gradient(circle at 30% 30%, #6587a3, #2e4961); color: #fff; }
+  .syllable[data-color="red"]    { background: radial-gradient(circle at 30% 30%, #d46850, #8a2d1c); color: #fff; }
+  .syllable[data-color="black"]  { background: radial-gradient(circle at 30% 30%, #5a4a3c, #1f1812); color: #f8f1e3; }
+
+  .syllable-label {
+    display: block;
+    margin-top: 0.4rem;
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-soft);
+  }
+
+  .mantra-text {
+    font-family: 'Noto Serif Tibetan', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--maroon-deep);
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .mantra-translit {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    letter-spacing: 0.4em;
+    color: var(--saffron-deep);
+    text-transform: uppercase;
+  }
+
+  /* === IMAGE SLOTS === */
+  .image-frame {
+    margin: 2.5rem auto;
+    max-width: 520px;
+    aspect-ratio: 3 / 4.2;
+    position: relative;
+    padding: 12px;
+    background:
+      linear-gradient(135deg, var(--maroon) 0%, var(--saffron-deep) 50%, var(--maroon) 100%);
+    box-shadow: 0 12px 40px var(--shadow-deep);
+    border-radius: 2px;
+  }
+
+  .image-frame-inner {
+    width: 100%; height: 100%;
+    background: var(--paper-deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-frame-inner svg {
+    width: 40%;
+    max-width: 140px;
+    opacity: 0.35;
+  }
+
+  .image-frame-placeholder {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .image-frame-placeholder code {
+    background: rgba(107, 30, 42, 0.08);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 0.85em;
+    color: var(--maroon-deep);
+  }
+
+  /* When a real image is present, hide the SVG placeholder and caption */
+  .image-frame-inner img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .image-frame-inner img + svg,
+  .image-frame-inner img ~ svg,
+  .image-frame-inner img + .image-frame-placeholder,
+  .image-frame-inner img ~ .image-frame-placeholder { display: none; }
+
+  .image-caption {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-top: 0.8rem;
+  }
+
+  /* === COLOPHON === */
+  .colophon {
+    max-width: 700px;
+    margin: 5rem auto 2rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(180deg, rgba(193, 99, 42, 0.04), rgba(107, 30, 42, 0.03));
+    border-top: 1px solid rgba(184, 136, 58, 0.3);
+    border-bottom: 1px solid rgba(184, 136, 58, 0.3);
+  }
+
+  .colophon h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--maroon-deep);
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .colophon ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .colophon li {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.97rem;
+    color: var(--ink);
+    margin-bottom: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .colophon li::before {
+    content: '༄';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-family: 'Noto Serif Tibetan', serif;
+  }
+
+  .colophon strong { color: var(--maroon-deep); }
+  .colophon em { color: var(--saffron-deep); font-style: italic; }
+
+  /* === CLOSING BLESSING === */
+  .closing {
+    text-align: center;
+    margin: 4rem auto 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .closing-bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--maroon-deep);
+    margin-bottom: 0.6rem;
+  }
+
+  .closing-translit {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--saffron-deep);
+    letter-spacing: 0.2em;
+  }
+
+  .closing-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.2rem;
+    color: var(--maroon);
+    letter-spacing: 0.4em;
+    margin-top: 0.6rem;
+  }
+
+  /* === FOOTER === */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  footer a {
+    color: var(--saffron-deep);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--saffron);
+  }
+
+  footer a:hover { color: var(--maroon); }
+
+  /* === TOC (floating) === */
+  .toc-toggle {
+    position: fixed;
+    top: 1.5rem; right: 1.5rem;
+    z-index: 100;
+    background: var(--paper-glow);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--shadow);
+    font-family: 'Noto Serif Tibetan', serif;
+    font-size: 1.4rem;
+    color: var(--maroon);
+    transition: transform 0.3s ease;
+  }
+
+  .toc-toggle:hover { transform: scale(1.08); }
+
+  .toc {
+    position: fixed;
+    top: 0; right: -340px;
+    width: 320px; height: 100vh;
+    background: var(--paper-glow);
+    border-left: 1px solid rgba(184, 136, 58, 0.3);
+    padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
+    box-shadow: -8px 0 30px var(--shadow);
+  }
+
+  .toc.open { right: 0; }
+
+  .toc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--saffron-deep);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(184, 136, 58, 0.3);
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+
+  .toc li {
+    counter-increment: toc-counter;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .toc li::before {
+    content: counter(toc-counter);
+    position: absolute;
+    left: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1rem;
+  }
+
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: block;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--maroon); }
+
+  /* === PRINT === */
+  @media print {
+    body { background: white; font-size: 11pt; }
+    body::before { display: none; }
+    .toc, .toc-toggle { display: none; }
+    .hero-mandala { filter: grayscale(0.5); }
+    .section { page-break-inside: avoid; }
+    .verse { border-left-color: #999; }
+    .image-frame { box-shadow: none; border: 2px solid #6b1e2a; }
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .page { padding: 2rem 1rem 4rem; }
+    .hero { padding: 2rem 0.5rem 3rem; }
+    .verse { padding: 0.8rem 0.8rem 0.8rem 1rem; }
+    .author-card { padding: 1.4rem 1.2rem; }
+    .mantra-syllables { gap: 0.3rem; }
+    .syllable { font-size: 1.2rem; }
+    .colophon { padding: 2rem 1.2rem; }
+  }
+  /* === COMPILER ATTRIBUTION CARD === */
+  .compiler-card {
+    max-width: 640px;
+    margin: 3rem auto 2rem;
+    padding: 2.5rem 2rem 2rem;
+    background: linear-gradient(160deg, rgba(107, 30, 42, 0.05) 0%, rgba(193, 99, 42, 0.04) 100%);
+    border: 1px solid rgba(184, 136, 58, 0.3);
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+  }
+
+  .compiler-card::before, .compiler-card::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--gold);
+    opacity: 0.45;
+  }
+
+  .compiler-card::before {
+    top: -1px; left: -1px;
+    border-right: none; border-bottom: none;
+  }
+
+  .compiler-card::after {
+    bottom: -1px; right: -1px;
+    border-left: none; border-top: none;
+  }
+
+  .compiler-portrait {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    margin: 0 auto 1.4rem;
+    display: block;
+    border: 3px solid var(--paper-glow);
+    box-shadow:
+      0 0 0 1px var(--gold),
+      0 8px 30px var(--shadow-deep);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .compiler-portrait:hover {
+    transform: scale(1.04);
+    box-shadow:
+      0 0 0 1px var(--gold),
+      0 12px 40px var(--shadow-deep);
+  }
+
+  .compiler-label {
+    font-family: 'Cormorant SC', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--saffron-deep);
+    margin-bottom: 0.9rem;
+  }
+
+  .compiler-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: var(--maroon-deep);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .compiler-bo {
+    font-family: 'Noto Serif Tibetan', serif;
+    color: var(--maroon);
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+    line-height: 1.8;
+  }
+
+  .compiler-zh {
+    font-family: 'Noto Serif SC', serif;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    margin-top: 0.2rem;
+  }
+
+  .compiler-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.2rem auto;
+  }
+
+  .compiler-role {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- === FLOATING TABLE OF CONTENTS === -->
+<button class="toc-toggle" onclick="document.querySelector('.toc').classList.toggle('open')" aria-label="Table of Contents">༄</button>
+
+<nav class="toc">
+  <h4>Sections · དཀར་ཆག</h4>
+  <ol>
+    <li><a href="#s1">Refuge &amp; Bodhicitta · སྐྱབས་འགྲོ</a></li>
+    <li><a href="#s2">The Four Immeasurables · ཚད་མེད་བཞི</a></li>
+    <li><a href="#s3">Deity Visualization · ལྷ་བསྐྱེད</a></li>
+    <li><a href="#s4">Seven-Branch Prayer · ཡན་ལག་བདུན་པ</a></li>
+    <li><a href="#s5">Prayer to the Six Realms · རིགས་དྲུག</a></li>
+    <li><a href="#s6">Mantra &amp; Dedication · སྔགས་དང་བསྔོ་བ</a></li>
+    <li><a href="#s7">Prayer for Dewachen · བདེ་སྨོན</a></li>
+    <li><a href="#colophon">Colophon · འགྱུར་བྱང</a></li>
+  </ol>
+</nav>
+
+<main class="page">
+
+<!-- === HERO === -->
+<section class="hero">
+  <div class="hero-mandala">
+    <!-- Lotus mandala with HRIH seed syllable -->
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="lotusGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fbf5e9"/>
+          <stop offset="70%" stop-color="#f8f1e3"/>
+          <stop offset="100%" stop-color="#ede1c8"/>
+        </radialGradient>
+        <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff8e8"/>
+          <stop offset="100%" stop-color="#c1632a" stop-opacity="0.15"/>
+        </radialGradient>
+        <linearGradient id="petalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#d4a890" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#c1632a" stop-opacity="0.15"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Outer decorative ring -->
+      <circle cx="200" cy="200" r="195" fill="none" stroke="#b8883a" stroke-width="0.5" opacity="0.4"/>
+      <circle cx="200" cy="200" r="188" fill="none" stroke="#b8883a" stroke-width="0.3" opacity="0.3"/>
+
+      <!-- Outer 16 petals -->
+      <g transform="translate(200,200)" style="animation: slowSpin 120s linear infinite;">
+        <g id="outer-petal">
+          <path d="M 0 -180 Q 20 -140 0 -110 Q -20 -140 0 -180 Z"
+                fill="url(#petalGrad)" stroke="#b8883a" stroke-width="0.4" opacity="0.7"/>
+        </g>
+        <use href="#outer-petal" transform="rotate(22.5)"/>
+        <use href="#outer-petal" transform="rotate(45)"/>
+        <use href="#outer-petal" transform="rotate(67.5)"/>
+        <use href="#outer-petal" transform="rotate(90)"/>
+        <use href="#outer-petal" transform="rotate(112.5)"/>
+        <use href="#outer-petal" transform="rotate(135)"/>
+        <use href="#outer-petal" transform="rotate(157.5)"/>
+        <use href="#outer-petal" transform="rotate(180)"/>
+        <use href="#outer-petal" transform="rotate(202.5)"/>
+        <use href="#outer-petal" transform="rotate(225)"/>
+        <use href="#outer-petal" transform="rotate(247.5)"/>
+        <use href="#outer-petal" transform="rotate(270)"/>
+        <use href="#outer-petal" transform="rotate(292.5)"/>
+        <use href="#outer-petal" transform="rotate(315)"/>
+        <use href="#outer-petal" transform="rotate(337.5)"/>
+      </g>
+
+      <!-- Middle ring -->
+      <circle cx="200" cy="200" r="108" fill="none" stroke="#b8883a" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="200" cy="200" r="102" fill="none" stroke="#b8883a" stroke-width="0.3" opacity="0.4"/>
+
+      <!-- Inner 8 petals (primary lotus) -->
+      <g transform="translate(200,200)">
+        <g id="inner-petal">
+          <path d="M 0 -100 Q 28 -65 0 -30 Q -28 -65 0 -100 Z"
+                fill="#fbf5e9" stroke="#c1632a" stroke-width="0.8" opacity="0.95"/>
+          <path d="M 0 -95 Q 18 -65 0 -38 Q -18 -65 0 -95 Z"
+                fill="none" stroke="#d4a890" stroke-width="0.4"/>
+        </g>
+        <use href="#inner-petal"/>
+        <use href="#inner-petal" transform="rotate(45)"/>
+        <use href="#inner-petal" transform="rotate(90)"/>
+        <use href="#inner-petal" transform="rotate(135)"/>
+        <use href="#inner-petal" transform="rotate(180)"/>
+        <use href="#inner-petal" transform="rotate(225)"/>
+        <use href="#inner-petal" transform="rotate(270)"/>
+        <use href="#inner-petal" transform="rotate(315)"/>
+      </g>
+
+      <!-- Moon disc -->
+      <circle cx="200" cy="200" r="42" fill="url(#centerGrad)" stroke="#b8883a" stroke-width="0.8"/>
+      <circle cx="200" cy="200" r="38" fill="#fbf5e9" stroke="#c1632a" stroke-width="0.5" opacity="0.6"/>
+
+      <!-- HRIH syllable -->
+      <text x="200" y="218" text-anchor="middle"
+            font-family="Noto Serif Tibetan, serif"
+            font-size="46" font-weight="700"
+            fill="#6b1e2a">ཧྲཱིཿ</text>
+    </svg>
+  </div>
+
+  <div class="hero-bo">སྤྱན་རས་གཟིགས་ཀྱི་སྒྲུབ་ཐབས།</div>
+  <h1 class="hero-title">The Practice of Noble Avalokiteśvara</h1>
+  <div class="hero-sub">Chenrezig Sadhana · A Four-Line Edition</div>
+  <div class="hero-zh">四臂观音修持仪轨</div>
+</section>
+
+<!-- === COMPILER ATTRIBUTION === -->
+<section class="section">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">❀</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="compiler-card">
+    <img src="khenpo-kunga-rinchen.jpg"
+         alt="Khenpo Kunga Rinchen"
+         class="compiler-portrait">
+
+    <div class="compiler-label">Edited &amp; Finalized by</div>
+    <div class="compiler-name">Khenpo Kunga Rinchen</div>
+    <div class="compiler-bo">མཁན་པོ་ཀུན་དགའ་རིན་ཆེན་གྱིས་རྩོམ་སྒྲིག་དང་ཞུས་ཆེན་བགྱིས།</div>
+    <div class="compiler-zh">贡噶·仁钦堪布 编校</div>
+
+    <div class="compiler-divider"></div>
+
+    <div class="compiler-role">
+      This four-line liturgical edition — presenting the Tibetan root text,<br>
+      phonetic guide, English translation, and Chinese Buddhist rendering —<br>
+      was compiled, edited, and finalized under the care of Khenpo Kunga Rinchen.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 1: REFUGE AND BODHICITTA                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s1">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">༄༅</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">I · དང་པོ</div>
+    <h2 class="section-title">Refuge and <em>Bodhicitta</em></h2>
+    <div class="section-title-bo">སྐྱབས་འགྲོ་སེམས་བསྐྱེད།</div>
+    <div class="section-title-zh">皈依 · 发心</div>
+  </header>
+
+  <div class="verse">
+    <div class="bo">སངས་རྒྱས་ཆོས་དང་ཚོགས་ཀྱི་མཆོག་རྣམས་ལ།།</div>
+    <div class="ph">Sang-gye chö-dang tsog-kyi chog-nam-la</div>
+    <div class="en">In the Buddha, the Dharma, and the Supreme Assembly,</div>
+    <div class="zh">诸佛正法贤圣三宝尊，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བྱང་ཆུབ་བར་དུ་བདག་ནི་སྐྱབས་སུ་མཆི།།</div>
+    <div class="ph">Jang-chub bar-du dag-ni kyab-su-chi</div>
+    <div class="en">Until enlightenment I take refuge.</div>
+    <div class="zh">从今直至菩提我皈依。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བདག་གིས་བསྒོམ་བཟླས་བགྱིས་པའི་བསོད་ནམས་ཀྱིས།།</div>
+    <div class="ph">Dag-gi gom-dé gyi-pé sö-nam-kyi</div>
+    <div class="en">Through the merit of my meditation and recitation,</div>
+    <div class="zh">以我修持念诵诸功德，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འགྲོ་ལ་ཕན་ཕྱིར་སངས་རྒྱས་འགྲུབ་པར་ཤོག།</div>
+    <div class="ph">Dro-la phen-chir sang-gye drub-par-shog</div>
+    <div class="en">May I attain Buddhahood for the benefit of beings.</div>
+    <div class="zh">为利众生愿成就佛果。</div>
+  </div>
+
+  <div class="rubric">Recite three times</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 2: FOUR IMMEASURABLES                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s2">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">❀</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">II · གཉིས་པ</div>
+    <h2 class="section-title">The Four <em>Immeasurables</em></h2>
+    <div class="section-title-bo">ཚད་མེད་བཞི།</div>
+    <div class="section-title-zh">四无量心</div>
+  </header>
+
+  <div class="verse-group">
+    <div class="verse-group-title">1 · Loving-Kindness · <span class="bo-inline">བྱམས་པ</span> · 慈无量</div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ཐམས་ཅད་བདེ་བ་དང་།།</div>
+      <div class="ph">Sem-chen tham-ché dé-wa-dang</div>
+      <div class="en">May all sentient beings have happiness</div>
+      <div class="zh">愿诸众生具足安乐，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">བདེ་བའི་རྒྱུ་དང་ལྡན་པར་གྱུར་ཅིག།</div>
+      <div class="ph">Dé-wé gyu-dang den-par-gyur-chig</div>
+      <div class="en">And the causes of happiness.</div>
+      <div class="zh">以及安乐之因。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">2 · Compassion · <span class="bo-inline">སྙིང་རྗེ</span> · 悲无量</div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ཐམས་ཅད་སྡུག་བསྔལ་དང་།།</div>
+      <div class="ph">Sem-chen tham-ché dug-ngal-dang</div>
+      <div class="en">May all sentient beings be free from suffering</div>
+      <div class="zh">愿诸众生远离众苦，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སྡུག་བསྔལ་གྱི་རྒྱུ་དང་བྲལ་བར་གྱུར་ཅིག།</div>
+      <div class="ph">Dug-ngal-gyi gyu-dang dral-war-gyur-chig</div>
+      <div class="en">And the causes of suffering.</div>
+      <div class="zh">以及众苦之因。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">3 · Sympathetic Joy · <span class="bo-inline">དགའ་བ</span> · 喜无量</div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ཐམས་ཅད་སྡུག་བསྔལ་མེད་པའི་བདེ་བ་དང་།།</div>
+      <div class="ph">Sem-chen tham-ché dug-ngal mé-pé dé-wa-dang</div>
+      <div class="en">May all sentient beings never be parted</div>
+      <div class="zh">愿诸众生永不离失，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">མི་བྲལ་བར་གྱུར་ཅིག།</div>
+      <div class="ph">Mi-dral-war-gyur-chig</div>
+      <div class="en">From the bliss that is free of suffering.</div>
+      <div class="zh">无苦之妙乐。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">4 · Equanimity · <span class="bo-inline">བཏང་སྙོམས</span> · 舍无量</div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ཐམས་ཅད་ཉེ་རིང་ཆགས་སྡང་དང་བྲལ་བའི།།</div>
+      <div class="ph">Sem-chen tham-ché nyé-ring chag-dang-dang dral-wé</div>
+      <div class="en">May all sentient beings, free from attachment to the near and aversion to the far,</div>
+      <div class="zh">愿诸众生远离亲疏爱憎，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">བཏང་སྙོམས་ལ་གནས་པར་གྱུར་ཅིག།</div>
+      <div class="ph">Tang-nyom-la né-par-gyur-chig</div>
+      <div class="en">Abide in great equanimity.</div>
+      <div class="zh">安住于大平等舍。</div>
+    </div>
+  </div>
+
+  <div class="rubric">Recite three times, contemplating each of the four in turn</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 3: DEITY VISUALIZATION                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s3">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">༄༅</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">III · གསུམ་པ</div>
+    <h2 class="section-title">Deity <em>Visualization</em></h2>
+    <div class="section-title-bo">ལྷ་བསྐྱེད་ནི།</div>
+    <div class="section-title-zh">观想本尊</div>
+  </header>
+
+  <!-- Image slot for Chenrezig thangka -->
+  <div class="image-frame">
+    <div class="image-frame-inner">
+      <img src="images/chenrezig.png" alt="Four-Armed Avalokiteśvara (Chenrezig) — thangka painting showing the white deity seated on a lotus, with four arms: the first two joined in prayer, the lower two holding a crystal rosary and white lotus.">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100,100)">
+          <circle r="80" fill="none" stroke="#6b1e2a" stroke-width="1" opacity="0.4"/>
+          <g stroke="#c1632a" stroke-width="1.2" fill="#c88a78" fill-opacity="0.3">
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(45)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(90)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(135)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(180)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(225)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(270)"/>
+            <path d="M 0 -70 Q 20 -40 0 -20 Q -20 -40 0 -70" transform="rotate(315)"/>
+          </g>
+          <circle r="22" fill="#fbf5e9" stroke="#b8883a" stroke-width="0.8"/>
+          <text y="10" text-anchor="middle" font-family="Noto Serif Tibetan, serif" font-size="26" fill="#6b1e2a">ཧྲཱིཿ</text>
+        </g>
+      </svg>
+      <div class="image-frame-placeholder">
+        <em>Thangka of Four-Armed Avalokiteśvara</em><br>
+        Replace with your own: <code>images/chenrezig.jpg</code>
+      </div>
+    </div>
+  </div>
+  <p class="image-caption">Four-Armed Avalokiteśvara · སྤྱན་རས་གཟིགས་ཕྱག་བཞི་པ། · 四臂观自在菩萨</p>
+
+  <div class="verse">
+    <div class="bo">བདག་སོགས་མཁའ་ཁྱབ་སེམས་ཅན་གྱི།།</div>
+    <div class="ph">Dag-sog kha-khyab sem-chen-gyi</div>
+    <div class="en">Above the crowns of myself and all beings pervading space,</div>
+    <div class="zh">于我及遍虚空一切众生，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྤྱི་གཙུག་པད་དཀར་ཟླ་བའི་སྟེང་།།</div>
+    <div class="ph">Chi-tsug pé-kar da-wé-teng</div>
+    <div class="en">Upon the crown, on a white lotus and moon disc,</div>
+    <div class="zh">顶上白莲月轮宝座之上，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཧྲཱིཿལས་འཕགས་མཆོག་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Hrih-lé phag-chog chen-ré-zig</div>
+    <div class="en">From the syllable <strong>HRĪḤ</strong> arises the Noble Supreme Avalokiteśvara.</div>
+    <div class="zh">由舍字现圣者观自在尊。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དཀར་གསལ་འོད་ཟེར་ལྔ་ལྡན་འཕྲོ།།</div>
+    <div class="ph">Kar-sal ö-zer nga-den-tro</div>
+    <div class="en">Radiant white, he emanates rays of five-colored light.</div>
+    <div class="zh">洁白晶莹放射五色光明。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འཛུམ་ལྡན་ཐུགས་རྗེའི་སྤྱན་གྱིས་གཟིགས།།</div>
+    <div class="ph">Dzum-den thug-jé chen-gyi-zig</div>
+    <div class="en">Smiling, he gazes upon us with eyes of compassion.</div>
+    <div class="zh">慈颜含笑悲眼慈视众生，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཕྱག་བཞིའི་དང་པོ་ཐལ་སྦྱར་མཛད།།</div>
+    <div class="ph">Chag-zhi dang-po thal-jar-dzé</div>
+    <div class="en">Of his four arms, the first two are joined in prayer at the heart;</div>
+    <div class="zh">四臂之中前二合掌于胸，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འོག་གཉིས་ཤེལ་ཕྲེང་པད་དཀར་བསྣམས།།</div>
+    <div class="ph">Og-nyi shel-treng pé-kar-nam</div>
+    <div class="en">The lower two hold a crystal rosary and a white lotus.</div>
+    <div class="zh">下方二手持水晶鬘白莲。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དར་དང་རིན་ཆེན་རྒྱན་གྱིས་སྤྲས།།</div>
+    <div class="ph">Dar-dang rin-chen gyen-gyi-tré</div>
+    <div class="en">He is adorned with silks and precious jewel ornaments,</div>
+    <div class="zh">绫罗珍宝妙饰以为庄严，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">རི་དྭགས་ལྤགས་པའི་སྟོད་གཡོག་གསོལ།།</div>
+    <div class="ph">Ri-dag pag-pé tö-yog-sol</div>
+    <div class="en">And wears an upper garment of antelope skin.</div>
+    <div class="zh">身披鹿皮为其上身衣裳。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འོད་དཔག་མེད་པའི་དབུ་རྒྱན་ཅན།།</div>
+    <div class="ph">Ö-pag-mé-pé u-gyen-chen</div>
+    <div class="en">Amitābha, Buddha of Infinite Light, graces his crown.</div>
+    <div class="zh">顶戴无量光佛以为严饰，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཞབས་གཉིས་རྡོ་རྗེ་སྐྱིལ་ཀྲུང་བཞུགས།།</div>
+    <div class="ph">Zhab-nyi dor-jé kyil-trung-zhug</div>
+    <div class="en">His two legs are settled in the vajra posture,</div>
+    <div class="zh">双足安住金刚跏趺而坐。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དྲི་མེད་ཟླ་བར་རྒྱབ་བསྟེན་པ།།</div>
+    <div class="ph">Dri-mé da-war gyab-ten-pa</div>
+    <div class="en">His back rests against a stainless moon.</div>
+    <div class="zh">背倚清净无垢皎洁之月，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྐྱབས་གནས་ཀུན་འདུས་ངོ་བོར་གྱུར།།</div>
+    <div class="ph">Kyab-né kün-dü ngo-wor-gyur</div>
+    <div class="en">He is the very essence of all sources of refuge gathered into one.</div>
+    <div class="zh">即是一切皈依之总集体。</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 4: SEVEN-BRANCH PRAYER                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s4">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">❀</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">IV · བཞི་པ</div>
+    <h2 class="section-title">The Seven-Branch <em>Prayer</em></h2>
+    <div class="section-title-bo">ཡན་ལག་བདུན་པའི་སྨོན་ལམ།</div>
+    <div class="section-title-zh">七支供养文</div>
+  </header>
+
+  <div class="author-card">
+    <div class="author-label">Composed by</div>
+    <div class="author-name">Gelongmā Palmo</div>
+    <div class="author-bo">དགེ་སློང་མ་དཔལ་མོ།</div>
+    <div class="author-zh">比丘尼 · 巴摩</div>
+    <p class="author-note">
+      The <em>bhikṣuṇī</em> Lakṣmī — known in Tibetan as Gelongma Palmo — was an eleventh-century Kashmiri princess turned nun, revered as the founder of the <em>Nyungne</em> fasting practice. Stricken with leprosy, she attained realization through the uninterrupted practice of Avalokiteśvara and composed this seven-branch offering as its preliminary.
+    </p>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འཕགས་པ་སྤྱན་རས་གཟིགས་དབང་དང་།།</div>
+    <div class="ph">Phag-pa chen-ré-zig-wang-dang</div>
+    <div class="en">To the Noble Lord Avalokiteśvara,</div>
+    <div class="zh">顶礼圣者观自在王尊，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཕྱོགས་བཅུ་དུས་གསུམ་བཞུགས་པ་ཡི།།</div>
+    <div class="ph">Chog-chu dü-sum zhug-pa-yi</div>
+    <div class="en">And to all who dwell in the ten directions and three times —</div>
+    <div class="zh">与住十方三时一切之，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">རྒྱལ་བ་སྲས་བཅས་ཐམས་ཅད་ལ།།</div>
+    <div class="ph">Gyal-wa sé-ché tham-ché-la</div>
+    <div class="en">To all the Victorious Ones together with their Sons,</div>
+    <div class="zh">诸佛世尊及诸佛子众，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཀུན་ནས་དང་བས་ཕྱག་འཚལ་ལོ།།</div>
+    <div class="ph">Kün-né dang-wé chag-tsal-lo</div>
+    <div class="en">With wholehearted devotion, I prostrate.</div>
+    <div class="zh">至诚恭敬虔心而顶礼。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">མེ་ཏོག་བདུག་སྤོས་མར་མེ་དྲི།།</div>
+    <div class="ph">Mé-tog dug-pö mar-mé-dri</div>
+    <div class="en">Flowers, incense, lamps, and perfumes,</div>
+    <div class="zh">鲜花熏香明灯与涂香，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཞལ་ཟས་རོལ་མོ་ལ་སོགས་པ།།</div>
+    <div class="ph">Zhal-zé röl-mo la-sog-pa</div>
+    <div class="en">Food, music, and offerings of every kind,</div>
+    <div class="zh">饮食音乐等等诸供云，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དངོས་འབྱོར་ཡིད་ཀྱིས་སྤྲུལ་ནས་འབུལ།།</div>
+    <div class="ph">Ngö-jor yi-kyi trül-né-bül</div>
+    <div class="en">Both actually arrayed and mentally emanated, I present.</div>
+    <div class="zh">实设以及意化诸供品，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འཕགས་པའི་ཚོགས་ཀྱིས་བཞེས་སུ་གསོལ།།</div>
+    <div class="ph">Phag-pé tsog-kyi zhé-su-sol</div>
+    <div class="en">O Assembly of Noble Ones, I pray you accept them.</div>
+    <div class="zh">祈请圣众慈悲哀纳受。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཐོག་མ་མེད་ནས་ད་ལྟའི་བར།།</div>
+    <div class="ph">Thog-ma-mé-né da-té-bar</div>
+    <div class="en">From time without beginning until now,</div>
+    <div class="zh">从无始时以来迄于今，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">མི་དགེ་བཅུ་དང་མཚམས་མེད་ལྔ།།</div>
+    <div class="ph">Mi-gé chu-dang tsam-mé-nga</div>
+    <div class="en">The ten non-virtues and the five inexpiable deeds —</div>
+    <div class="zh">十不善业以及五无间，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སེམས་ནི་ཉོན་མོངས་དབང་གྱུར་པའི།།</div>
+    <div class="ph">Sem-ni nyön-mong wang-gyur-pé</div>
+    <div class="en">All misdeeds committed while the mind was under the sway of afflictions,</div>
+    <div class="zh">一切心为烦恼所支配，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྡིག་པ་ཐམས་ཅད་བཤགས་པར་བགྱི།།</div>
+    <div class="ph">Dig-pa tham-ché shag-par-gyi</div>
+    <div class="en">Each and every one I confess.</div>
+    <div class="zh">所造诸罪悉皆发露忏。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཉན་ཐོས་རང་རྒྱལ་བྱང་ཆུབ་སེམས།།</div>
+    <div class="ph">Nyen-thö rang-gyal jang-chub-sem</div>
+    <div class="en">Of Śrāvakas, Pratyekabuddhas, Bodhisattvas,</div>
+    <div class="zh">声闻缘觉以及诸菩萨，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སོ་སོ་སྐྱེ་བོ་ལ་སོགས་པས།།</div>
+    <div class="ph">So-so kyé-wo la-sog-pé</div>
+    <div class="en">Ordinary beings, and all others,</div>
+    <div class="zh">乃至凡夫众生等一切，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དུས་གསུམ་དགེ་བ་ཅི་བསགས་པའི།།</div>
+    <div class="ph">Dü-sum gé-wa chi-sag-pé</div>
+    <div class="en">Whatever virtue has been gathered in the three times —</div>
+    <div class="zh">三世所积一切诸善根，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བསོད་ནམས་ལ་ནི་བདག་ཡི་རང་།།</div>
+    <div class="ph">Sö-nam-la-ni dag-yi-rang</div>
+    <div class="en">In all such merit I rejoice.</div>
+    <div class="zh">所有功德我皆随喜之。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སེམས་ཅན་རྣམས་ཀྱི་བསམ་པ་དང་།།</div>
+    <div class="ph">Sem-chen nam-kyi sam-pa-dang</div>
+    <div class="en">In accordance with the various dispositions</div>
+    <div class="zh">随顺众生种种之根机，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བློ་ཡི་བྱེ་བྲག་ཇི་ལྟར་བར།།</div>
+    <div class="ph">Lo-yi jé-drag ji-tar-war</div>
+    <div class="en">And capacities of sentient beings' minds —</div>
+    <div class="zh">以及各别意乐之差别，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཆེ་ཆུང་ཐུན་མོང་ཐེག་པ་ཡི།།</div>
+    <div class="ph">Ché-chung tün-mong theg-pa-yi</div>
+    <div class="en">Through the greater, lesser, and common vehicles,</div>
+    <div class="zh">大小乘以及共同诸乘，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་དུ་གསོལ།།</div>
+    <div class="ph">Chö-kyi khor-lo kor-du-sol</div>
+    <div class="en">I beseech you: turn the Wheel of Dharma.</div>
+    <div class="zh">祈请转动无上妙法轮。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འཁོར་བ་ཇི་སྲིད་མ་སྟོངས་བར།།</div>
+    <div class="ph">Khor-wa ji-si ma-tong-war</div>
+    <div class="en">Until saṃsāra is utterly emptied,</div>
+    <div class="zh">乃至轮回未空之间，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">མྱ་ངན་མི་འདའ་ཐུགས་རྗེ་ཡིས།།</div>
+    <div class="ph">Nya-ngen mi-da thug-jé-yi</div>
+    <div class="en">Out of your compassion, do not pass into nirvāṇa.</div>
+    <div class="zh">祈以悲心莫入般涅槃。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྡུག་བསྔལ་རྒྱ་མཚོར་བྱིང་བ་ཡི།།</div>
+    <div class="ph">Dug-ngal gya-tsor jing-wa-yi</div>
+    <div class="en">Upon all beings drowning in the ocean of suffering,</div>
+    <div class="zh">沉溺无边苦海之众生，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སེམས་ཅན་རྣམས་ལ་གཟིགས་སུ་གསོལ།།</div>
+    <div class="ph">Sem-chen nam-la zig-su-sol</div>
+    <div class="en">I pray that you gaze down with compassionate eyes.</div>
+    <div class="zh">祈请大悲慈悯而观照。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བདག་གིས་བསོད་ནམས་ཅི་བསགས་པ།།</div>
+    <div class="ph">Dag-gi sö-nam chi-sag-pa</div>
+    <div class="en">Whatever merit I have gathered,</div>
+    <div class="zh">以我所积一切诸功德，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཐམས་ཅད་བྱང་ཆུབ་རྒྱུར་གྱུར་ནས།།</div>
+    <div class="ph">Tham-ché jang-chub gyur-gyur-né</div>
+    <div class="en">May it all become a cause of enlightenment.</div>
+    <div class="zh">悉皆成就无上菩提因。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">རིང་པོར་མི་ཐོགས་འགྲོ་བ་ཡི།།</div>
+    <div class="ph">Ring-por mi-thog dro-wa-yi</div>
+    <div class="en">Without long delay, may I become</div>
+    <div class="zh">愿我不久之间即成为，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འདྲེན་པའི་དཔལ་དུ་བདག་གྱུར་ཅིག།</div>
+    <div class="ph">Dren-pé pal-du dag-gyur-chig</div>
+    <div class="en">The glorious Guide of all beings.</div>
+    <div class="zh">一切众生引导之光荣。</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 5: PRAYER TO THE SIX REALMS                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s5">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">༄༅</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">V · ལྔ་པ</div>
+    <h2 class="section-title">Prayer to the <em>Six Realms</em></h2>
+    <div class="section-title-bo">རིགས་དྲུག་གི་སྨོན་ལམ།</div>
+    <div class="section-title-zh">六道普救祈请文</div>
+  </header>
+
+  <div class="author-card">
+    <div class="author-label">Composed by</div>
+    <div class="author-name">Gelong Pema Karpo</div>
+    <div class="author-bo">དགེ་སློང་པདྨ་དཀར་པོ།</div>
+    <div class="author-zh">比丘 · 贝玛噶波</div>
+    <p class="author-note">
+      "White Lotus" (Padma Karpo) — a name borne by several eminent Tibetan masters, most notably the fourth Gyalwang Drukpa (1527–1592), hierarch of the Drukpa Kagyü lineage and prolific author. The prayer descends through the Chenrezig practice lineages, invoking the Great Compassionate One to lead beings from each of the six realms to the pure land of Potala.
+    </p>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསོལ་བ་འདེབས་སོ་བླ་མ་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Sol-wa deb-so la-ma chen-ré-zig</div>
+    <div class="en">I supplicate you, Guru Chenrezig.</div>
+    <div class="zh">祈请上师观世音。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསོལ་བ་འདེབས་སོ་ཡི་དམ་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Sol-wa deb-so yi-dam chen-ré-zig</div>
+    <div class="en">I supplicate you, Yidam Chenrezig.</div>
+    <div class="zh">祈请本尊观世音。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསོལ་བ་འདེབས་སོ་འཕགས་མཆོག་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Sol-wa deb-so phag-chog chen-ré-zig</div>
+    <div class="en">I supplicate you, Noble Supreme Chenrezig.</div>
+    <div class="zh">祈请圣尊观世音。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསོལ་བ་འདེབས་སོ་སྐྱབས་མགོན་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Sol-wa deb-so kyab-gön chen-ré-zig</div>
+    <div class="en">I supplicate you, Refuge-Protector Chenrezig.</div>
+    <div class="zh">祈请怙主观世音。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསོལ་བ་འདེབས་སོ་བྱམས་མགོན་སྤྱན་རས་གཟིགས།།</div>
+    <div class="ph">Sol-wa deb-so jam-gön chen-ré-zig</div>
+    <div class="en">I supplicate you, Loving Protector Chenrezig.</div>
+    <div class="zh">祈请慈尊观世音。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">ཐུགས་རྗེས་ཟུངས་ཤིག་རྒྱལ་བ་ཐུགས་རྗེ་ཅན།།</div>
+    <div class="ph">Thug-jé zung-shig gyal-wa thug-jé-chen</div>
+    <div class="en">Hold me with your compassion, O Compassionate Victor!</div>
+    <div class="zh">大悲摄受具悲胜者尊。</div>
+  </div>
+
+  <!-- Six Realms -->
+  <div class="verse-group">
+    <div class="verse-group-title">The Gods Realm <span class="realm-tag">Pride · ང་རྒྱལ</span></div>
+    <div class="verse">
+      <div class="bo">ང་རྒྱལ་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Nga-gyal lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of pride,</div>
+      <div class="zh">由以我慢业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ལྷ་རུ་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen lha-ru kyé-gyur-té</div>
+      <div class="en">Beings are born as gods,</div>
+      <div class="zh">众生得生于天道之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">འཕོ་ལྟུང་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Pho-tung dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer the falling from high estate —</div>
+      <div class="zh">受彼死堕众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">པོ་ཏ་ལ་ཡི་ཞིང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Po-ta-la-yi zhing-du kyé-war-shog</div>
+      <div class="en">May they be born in the pure realm of Potala.</div>
+      <div class="zh">愿生怙主普陀拉净土。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">The Demigod Realm <span class="realm-tag">Jealousy · ཕྲག་དོག</span></div>
+    <div class="verse">
+      <div class="bo">ཕྲག་དོག་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Trag-dog lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of jealousy,</div>
+      <div class="zh">由以嫉妒业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ལྷ་མིན་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen lha-min kyé-gyur-té</div>
+      <div class="en">Beings are born as demigods,</div>
+      <div class="zh">众生得生于非天之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">འཐབ་རྩོད་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Thab-tsö dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer ceaseless strife —</div>
+      <div class="zh">受彼斗争众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">པོ་ཏ་ལ་ཡི་ཞིང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Po-ta-la-yi zhing-du kyé-war-shog</div>
+      <div class="en">May they be born in the pure realm of Potala.</div>
+      <div class="zh">愿生怙主普陀拉净土。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">The Human Realm <span class="realm-tag">Desire · འདོད་ཆགས</span></div>
+    <div class="verse">
+      <div class="bo">འདོད་ཆགས་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Dö-chag lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of desire,</div>
+      <div class="zh">由以贪欲业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་མི་རུ་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen mi-ru kyé-gyur-té</div>
+      <div class="en">Beings are born as humans,</div>
+      <div class="zh">众生得生于人道之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">འདུ་འཛི་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Du-dzi dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer constant toil and bustle —</div>
+      <div class="zh">受彼营碌众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">བདེ་བ་ཅན་གྱི་ཞིང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Dé-wa-chen-gyi zhing-du kyé-war-shog</div>
+      <div class="en">May they be born in the pure realm of Dewachen.</div>
+      <div class="zh">愿生极乐世界之净土。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">The Animal Realm <span class="realm-tag">Ignorance · གཏི་མུག</span></div>
+    <div class="verse">
+      <div class="bo">གཏི་མུག་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Ti-mug lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of ignorance,</div>
+      <div class="zh">由以愚痴业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་བྱོལ་སོང་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen jol-song kyé-gyur-té</div>
+      <div class="en">Beings are born as animals,</div>
+      <div class="zh">众生得生于畜生之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">གླེན་ལྐུགས་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Len-kug dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer dullness and stupidity —</div>
+      <div class="zh">受彼愚钝众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">མགོན་པོ་ཁྱེད་ཀྱི་དྲུང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Gön-po khyé-kyi drung-du kyé-war-shog</div>
+      <div class="en">May they be born in your presence, O Protector.</div>
+      <div class="zh">愿生怙主尊前得救度。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">The Hungry Ghost Realm <span class="realm-tag">Avarice · སེར་སྣ</span></div>
+    <div class="verse">
+      <div class="bo">སེར་སྣའི་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Sér-né lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of avarice,</div>
+      <div class="zh">由以悭吝业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་ཡི་དྭགས་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen yi-dag kyé-gyur-té</div>
+      <div class="en">Beings are born as hungry ghosts,</div>
+      <div class="zh">众生得生于饿鬼之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">བཀྲེས་སྐོམ་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Tré-kom dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer hunger and thirst —</div>
+      <div class="zh">受彼饥渴众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">པོ་ཏ་ལ་ཡི་ཞིང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Po-ta-la-yi zhing-du kyé-war-shog</div>
+      <div class="en">May they be born in the pure realm of Potala.</div>
+      <div class="zh">愿生怙主普陀拉净土。</div>
+    </div>
+  </div>
+
+  <div class="verse-group">
+    <div class="verse-group-title">The Hell Realm <span class="realm-tag">Hatred · ཞེ་སྡང</span></div>
+    <div class="verse">
+      <div class="bo">ཞེ་སྡང་ལས་ཀྱི་འབྲས་བུ་ཡིས།།</div>
+      <div class="ph">Zhé-dang lé-kyi dré-bu-yi</div>
+      <div class="en">Through the fruit of the karma of hatred,</div>
+      <div class="zh">由以嗔恚业之果报故，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">སེམས་ཅན་དམྱལ་བར་སྐྱེས་གྱུར་ཏེ།།</div>
+      <div class="ph">Sem-chen nyal-war kyé-gyur-té</div>
+      <div class="en">Beings are born in the hells,</div>
+      <div class="zh">众生得生于地狱之中，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">ཚ་གྲང་སྡུག་བསྔལ་མྱོང་བའི་འགྲོ།།</div>
+      <div class="ph">Tsha-drang dug-ngal nyong-wé-dro</div>
+      <div class="en">Wanderers who suffer burning heat and freezing cold —</div>
+      <div class="zh">受彼寒热众苦诸有情，</div>
+    </div>
+    <div class="verse">
+      <div class="bo">ལྷ་མཆོག་ཁྱེད་ཀྱི་དྲུང་དུ་སྐྱེ་བར་ཤོག།</div>
+      <div class="ph">Lha-chog khyé-kyi drung-du kyé-war-shog</div>
+      <div class="en">May they be born in your presence, Supreme Deity.</div>
+      <div class="zh">愿生本尊圣前得救度。</div>
+    </div>
+  </div>
+
+  <!-- Closing aspiration -->
+  <div class="verse">
+    <div class="bo">བདག་ནི་སྐྱེ་ཞིང་སྐྱེ་བ་ཐམས་ཅད་དུ།།</div>
+    <div class="ph">Dag-ni kyé-zhing kyé-wa tham-ché-du</div>
+    <div class="en">In all my births, throughout every lifetime,</div>
+    <div class="zh">愿我生生世世一切生，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྤྱན་རས་གཟིགས་དང་མཛད་པ་མཚུངས་པ་ཡིས།།</div>
+    <div class="ph">Chen-ré-zig-dang dzé-pa tsung-pa-yi</div>
+    <div class="en">With deeds equal to those of Avalokiteśvara,</div>
+    <div class="zh">行持等同观音之事业，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">མ་དག་ཞིང་གི་འགྲོ་རྣམས་སྒྲོལ་བ་དང་།།</div>
+    <div class="ph">Ma-dag zhing-gi dro-nam drol-wa-dang</div>
+    <div class="en">May I liberate beings in the impure realms,</div>
+    <div class="zh">普度不净刹土之众生，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གསུང་མཆོག་ཡིག་དྲུག་ཕྱོགས་བཅུར་རྒྱས་པར་ཤོག།</div>
+    <div class="ph">Sung-chog yig-drug chog-chur gyé-par-shog</div>
+    <div class="en">And spread the Supreme Speech of Six Syllables throughout the ten directions.</div>
+    <div class="zh">愿妙六字真言遍十方。</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 6: MANTRA AND DEDICATION                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s6">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">❀</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">VI · དྲུག་པ</div>
+    <h2 class="section-title">Mantra &amp; <em>Dedication</em></h2>
+    <div class="section-title-bo">སྔགས་དང་བསྔོ་བ།</div>
+    <div class="section-title-zh">持咒与回向</div>
+  </header>
+
+  <div class="mantra-display">
+    <div class="mantra-text">ཨོཾ་མ་ཎི་པདྨེ་ཧཱུྃ།</div>
+    <div class="mantra-translit">Oṃ Maṇi Padme Hūṃ</div>
+
+    <div class="mantra-syllables">
+      <div>
+        <div class="syllable" data-color="white">ཨོཾ</div>
+        <span class="syllable-label">Oṃ · White</span>
+      </div>
+      <div>
+        <div class="syllable" data-color="green">མ</div>
+        <span class="syllable-label">Ma · Green</span>
+      </div>
+      <div>
+        <div class="syllable" data-color="yellow">ཎི</div>
+        <span class="syllable-label">Ṇi · Yellow</span>
+      </div>
+      <div>
+        <div class="syllable" data-color="blue">པད</div>
+        <span class="syllable-label">Pad · Blue</span>
+      </div>
+      <div>
+        <div class="syllable" data-color="red">མེ</div>
+        <span class="syllable-label">Me · Red</span>
+      </div>
+      <div>
+        <div class="syllable" data-color="black">ཧཱུྃ</div>
+        <span class="syllable-label">Hūṃ · Black</span>
+      </div>
+    </div>
+
+    <p class="rubric">Recite 108, 1,000, 10,000 times or more · At the end, dissolve the visualization and rest in the natural state</p>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དགེ་བ་འདི་ཡིས་མྱུར་དུ་བདག།</div>
+    <div class="ph">Gé-wa di-yi nyur-du-dag</div>
+    <div class="en">By this virtue, may I swiftly</div>
+    <div class="zh">愿我以此诸善功德力，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྤྱན་རས་གཟིགས་དབང་འགྲུབ་གྱུར་ནས།།</div>
+    <div class="ph">Chen-ré-zig-wang drub-gyur-né</div>
+    <div class="en">Accomplish the state of Lord Avalokiteśvara,</div>
+    <div class="zh">速证观音大士之果位，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">འགྲོ་བ་གཅིག་ཀྱང་མ་ལུས་པ།།</div>
+    <div class="ph">Dro-wa chig-kyang ma-lü-pa</div>
+    <div class="en">And may every single being, without exception,</div>
+    <div class="zh">一切众生无一有遗余，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དེ་ཡི་ས་ལ་འགོད་པར་ཤོག།</div>
+    <div class="ph">Dé-yi sa-la gö-par-shog</div>
+    <div class="en">Be established at that very same level.</div>
+    <div class="zh">悉皆安置于彼之果位。</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SECTION 7: PRAYER FOR DEWACHEN                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section" id="s7">
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">༄༅</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <header class="section-header">
+    <div class="section-number">VII · བདུན་པ</div>
+    <h2 class="section-title">The Wondrous Prayer for <em>Dewachen</em></h2>
+    <div class="section-title-bo">བདེ་སྨོན།</div>
+    <div class="section-title-zh">极乐愿文</div>
+  </header>
+
+  <!-- Image slot for Dewachen -->
+  <div class="image-frame">
+    <div class="image-frame-inner">
+      <img src="images/dewachen.png" alt="Amitābha Buddha in the pure land of Sukhāvatī (Dewachen) — thangka painting showing the red Buddha of Infinite Light surrounded by bodhisattvas, celestial palaces, and lotus ponds.">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100,100)">
+          <defs>
+            <radialGradient id="sunset" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f4c97a"/>
+              <stop offset="100%" stop-color="#c1632a"/>
+            </radialGradient>
+          </defs>
+          <circle r="60" fill="url(#sunset)" opacity="0.4"/>
+          <circle r="40" fill="#fbf5e9" opacity="0.6"/>
+          <text y="12" text-anchor="middle" font-family="Noto Serif Tibetan, serif" font-size="44" fill="#6b1e2a">ཧྲཱིཿ</text>
+          <text y="60" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="14" fill="#6b1e2a">Amitābha</text>
+        </g>
+      </svg>
+      <div class="image-frame-placeholder">
+        <em>Amitābha &amp; the Pure Land of Dewachen</em><br>
+        Replace with your own: <code>images/dewachen.jpg</code>
+      </div>
+    </div>
+  </div>
+  <p class="image-caption">Amitābha in the Pure Land of Sukhāvatī · བདེ་བ་ཅན། · 极乐世界 · 阿弥陀佛</p>
+
+  <div class="verse">
+    <div class="bo">ཨེ་མ་ཧོ༔ ངོ་མཚར་སངས་རྒྱས་སྣང་བ་མཐའ་ཡས་དང་༔</div>
+    <div class="ph">E-ma-ho! Ngo-tsar sang-gyé nang-wa tha-yé-dang</div>
+    <div class="en">EMAHO! Wondrous Buddha of Boundless Light,</div>
+    <div class="zh">诶玛吙！稀有佛陀无量光如来，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གཡས་སུ་ཇོ་བོ་ཐུགས་རྗེ་ཆེན་པོ་དང་༔</div>
+    <div class="ph">Yé-su jo-wo thug-jé chen-po-dang</div>
+    <div class="en">On your right, the Lord of Great Compassion (Avalokiteśvara),</div>
+    <div class="zh">右侧至尊大悲观自在，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">གཡོན་དུ་སེམས་དཔའ་མཐུ་ཆེན་ཐོབ་རྣམས་ལ༔</div>
+    <div class="ph">Yön-du sem-pa thü-chen-thob-nam-la</div>
+    <div class="en">On your left, the Bodhisattva Mahāsthāmaprāpta (He Who Has Attained Great Might) —</div>
+    <div class="zh">左侧菩萨大势至者尊。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སངས་རྒྱས་བྱང་སེམས་དཔག་མེད་འཁོར་གྱིས་བསྐོར༔</div>
+    <div class="ph">Sang-gyé jang-sem pag-mé khor-gyi-kor</div>
+    <div class="en">Surrounded by a boundless retinue of Buddhas and Bodhisattvas,</div>
+    <div class="zh">无量佛菩萨众之所绕，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བདེ་སྐྱིད་ངོ་མཚར་དཔག་ཏུ་མེད་པ་ཡི༔</div>
+    <div class="ph">Dé-kyi ngo-tsar pag-tu-mé-pa-yi</div>
+    <div class="en">In that wondrous bliss beyond all measure —</div>
+    <div class="zh">具有无量奇妙之安乐，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བདེ་བ་ཅན་ཞེས་བྱ་བའི་ཞིང་ཁམས་དེར༔</div>
+    <div class="ph">Dé-wa-chen zhé-ja-wé zhing-kham-dér</div>
+    <div class="en">In the pure realm known as Dewachen, the Land of Bliss,</div>
+    <div class="zh">名为极乐世界之刹土。</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">བདག་ནི་འདི་ནས་ཚེ་འཕོས་གྱུར་མ་ཐག༔</div>
+    <div class="ph">Dag-ni di-né tsé-phö gyur-ma-thag</div>
+    <div class="en">Immediately upon passing from this life,</div>
+    <div class="zh">愿我此生命终即刻后，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">སྐྱེ་བ་གཞན་གྱིས་བར་མ་ཆོད་པ་རུ༔</div>
+    <div class="ph">Kyé-wa zhen-gyi bar-ma-chö-pa-ru</div>
+    <div class="en">Without another birth intervening,</div>
+    <div class="zh">不为余生所间隔阻断，</div>
+  </div>
+
+  <div class="verse">
+    <div class="bo">དེ་རུ་སྐྱེས་ནས་སྣང་མཐའི་ཞལ་མཐོང་ཤོག༔</div>
+    <div class="ph">Dé-ru kyé-né nang-thé zhal-thong-shog</div>
+    <div class="en">May I be born there and behold the face of Amitābha!</div>
+    <div class="zh">生彼刹土亲见弥陀尊！</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- COLOPHON                                                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-ornament">༄༅</span>
+  <div class="divider-line"></div>
+</div>
+
+<section class="colophon" id="colophon">
+  <h3>Colophon · Editor's Notes · 译后记</h3>
+  <ul>
+    <li>This edition was <strong>compiled, edited, and finalized by Khenpo Kunga Rinchen</strong> (མཁན་པོ་ཀུན་དགའ་རིན་ཆེན། · 贡噶·仁钦堪布).</li>
+    <li><strong>Phonetics</strong> follow a standardized THL-style transliteration, lightly adjusted for ease of chanting.</li>
+    <li><strong>English</strong> has been smoothed for liturgical rhythm while staying faithful to the Tibetan line-by-line.</li>
+    <li><strong>Chinese</strong> has been refined toward classical Buddhist register (佛经体) with consistent terminology across sections.</li>
+    <li><em>Correction:</em> <span lang="bo">མཐུ་ཆེན་ཐོབ</span> (<em>Thuchen-thob</em>) is <strong>Mahāsthāmaprāpta · 大势至菩萨</strong>, not Vajrapāṇi — the Dewachen triad is Amitābha flanked by Avalokiteśvara and Mahāsthāmaprāpta.</li>
+    <li><em>Section 5</em> six-realms verses follow the standard Karma Chagme / Thangtong Gyalpo lineage form. Swap for your own tradition's recension if different.</li>
+    <li>Images shown here are SVG placeholders. To add your own thangkas, drop image files into <code style="background:rgba(107,30,42,0.08);padding:2px 6px;border-radius:2px;font-size:0.9em;color:#4a1319;">/images/</code> and uncomment the <code style="background:rgba(107,30,42,0.08);padding:2px 6px;border-radius:2px;font-size:0.9em;color:#4a1319;">&lt;img&gt;</code> tags in the HTML source.</li>
+  </ul>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CLOSING BLESSING                                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="closing">
+  <div class="closing-bo">སརྦ་མངྒ་ལཾ།</div>
+  <div class="closing-translit">Sarva Maṅgalaṃ</div>
+  <div class="closing-zh">吉 祥 圆 满</div>
+</div>
+
+<footer>
+  May all who encounter this text swiftly attain the state of Noble Avalokiteśvara,<br>
+  and may every being without exception be established at that same ground.<br><br>
+  <span style="font-size:0.82rem;color:var(--gold);">Edited &amp; Finalized by Khenpo Kunga Rinchen · 贡噶·仁钦堪布 编校</span>
+</footer>
+
+</main>
+
+<script>
+  // Close TOC on link click (mobile)
+  document.querySelectorAll('.toc a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.toc').classList.remove('open');
+    });
+  });
+
+  // Close TOC on outside click
+  document.addEventListener('click', (e) => {
+    const toc = document.querySelector('.toc');
+    const toggle = document.querySelector('.toc-toggle');
+    if (!toc.contains(e.target) && !toggle.contains(e.target)) {
+      toc.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
